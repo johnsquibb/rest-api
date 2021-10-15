@@ -29,5 +29,9 @@ Use the builtin PHP server to serve from the public directory during development
 
 Then visit: http://localhost:8080/api to view the demo.
 
-Demo resource provides GET (collection), GET (item), POST (create item), PUT (update item), DELETE (
-item) operations: http://localhost:8080/api/demo
+The Demo resource at http://localhost:8080/api/demo provides the following operations:
+- GET (collection)
+- GET (item)
+- POST (create item)
+- PUT (update item)
+- DELETE (item)
