@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a63159dd5601eb37afee26074c71c7d",
+    "content-hash": "b9f704a0eeacf29d86dfb871b7a13be4",
     "packages": [
         {
             "name": "johnsquibb/php-microframework",
