@@ -6,7 +6,7 @@ class DemoRepository implements RepositoryInterface
 {
     public function getCollection(array $filters): array
     {
-       return [
+        return [
             'items' => [
                 [
                     'resourceId' => 'abc123',
