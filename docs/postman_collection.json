@@ -59,14 +59,35 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/demo",
+					"raw": "localhost:8080/api/demo/abc",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"demo"
+						"demo",
+						"abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/demo/{resource} 404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/demo/xyz",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"demo",
+						"xyz"
 					]
 				}
 			},
@@ -103,14 +124,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/demo",
+					"raw": "localhost:8080/api/demo/abc",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"demo"
+						"demo",
+						"abc"
 					]
 				}
 			},
@@ -122,14 +144,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/demo",
+					"raw": "localhost:8080/api/demor",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"demo"
+						"demor"
 					]
 				}
 			},

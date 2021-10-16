@@ -1,7 +1,7 @@
 # php-microframework
 
-A minimal PHP 8 REST API supported
-by [php-microframework](https://github.com/johnsquibb/php-microframework).
+A minimal PHP 8 REST API built
+onto [php-microframework](https://github.com/johnsquibb/php-microframework).
 
 ## Features
 
@@ -30,6 +30,7 @@ Use the builtin PHP server to serve from the public directory during development
 Then visit: http://localhost:8080/api to view the demo.
 
 The Demo resource at http://localhost:8080/api/demo provides the following operations:
+
 - GET (collection)
 - GET (item)
 - POST (create item)
