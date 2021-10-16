@@ -25,8 +25,7 @@ class ApiEndpointHandler
                 default => new JsonResponse([]),
             };
         } catch (ApiErrorException $e) {
-            header($e->getMessage(), true, $e->getCode());
-            return new JsonResponse(['error' => $e->getMessage()]);
+            return $this->handleError($e);
         }
     }
 
@@ -44,15 +43,7 @@ class ApiEndpointHandler
             throw new ApiErrorException(HttpResponse::HTTP_BAD_REQUEST);
         }
 
-        try {
-            $endpoint->deleteItem($resourceId);
-        } catch (ApiErrorException $e) {
-            if ($e->getCode() !== HttpResponse::HTTP_GONE) {
-                throw $e;
-            }
-
-            header($e->getMessage(), true, $e->getCode());
-        }
+        $endpoint->deleteItem($resourceId);
 
         return new JsonResponse([]);
     }
@@ -98,5 +89,17 @@ class ApiEndpointHandler
         } catch (JsonException) {
             throw new ApiErrorException(HttpResponse::HTTP_BAD_REQUEST);
         }
+    }
+
+    private function handleError(ApiErrorException|\Exception $e): ResponseInterface
+    {
+        header($e->getHeaderString(), true, $e->getCode());
+
+        $data = [];
+        if (!empty($e->getMessage())) {
+            $data['error'] = $e->getMessage();
+        }
+
+        return new JsonResponse($data);
     }
 }

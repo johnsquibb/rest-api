@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use PhpMicroframework\Application\Controller\ApiController;
-use PhpMicroframework\Framework\Core;
+use PhpMicroframework\Application\Core;
 use PhpMicroframework\Framework\Problem;
 use PhpMicroframework\Framework\Router;
 

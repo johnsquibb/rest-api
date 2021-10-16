@@ -34,7 +34,7 @@ class DemoApiEndpoint extends AbstractApiEndpoint
 
     public function getItem(string $resourceId): ResponseInterface
     {
-        return new JsonResponse($this->demoRepository->getItemById($resourceId));
+        return new JsonResponse($this->getItemData($resourceId));
     }
 
     public function postCollection(array $context): ResponseInterface
@@ -44,6 +44,9 @@ class DemoApiEndpoint extends AbstractApiEndpoint
 
     public function putItem(string $resourceId, array $context): ResponseInterface
     {
+        // Verify item exists.
+        $this->getItemData($resourceId);
+
         return new JsonResponse($this->demoRepository->updateItem($resourceId, $context));
     }
 
@@ -76,5 +79,15 @@ class DemoApiEndpoint extends AbstractApiEndpoint
         }
 
         return $sanitized;
+    }
+
+    private function getItemData(string $resourceId): array
+    {
+        $data = $this->demoRepository->getItemById($resourceId);
+        if (empty($data)) {
+            throw new ApiErrorException(HttpResponse::HTTP_NOT_FOUND);
+        }
+
+        return $data;
     }
 }

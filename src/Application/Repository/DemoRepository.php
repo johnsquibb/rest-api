@@ -22,9 +22,12 @@ class DemoRepository implements RepositoryInterface
 
     public function getItemById(string $id): array
     {
-        return [
-            'id' => $id,
-        ];
+        return match ($id) {
+            'abc' => [
+                'id' => $id,
+            ],
+            default => [],
+        };
     }
 
     public function createItem(array $data): array
@@ -37,11 +40,13 @@ class DemoRepository implements RepositoryInterface
     public function updateItem(string $id, array $data): array
     {
         return [
-            'id' => '999',
+            'id' => $id,
+            'updated' => true,
         ];
     }
 
     public function deleteItemById(string $id): void
     {
+        // Delete logic here.
     }
 }
