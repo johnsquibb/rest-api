@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "b5ce3d50-a723-4d1d-8ebd-d6cb0470bfe4",
+		"name": "php-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/index",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/demo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/demo?foo=abcdefghijklmnopqrstuvwxyz&bar=abcdefg-hijklmnop-qrstuv",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"demo"
+					],
+					"query": [
+						{
+							"key": "foo",
+							"value": "abcdefghijklmnopqrstuvwxyz"
+						},
+						{
+							"key": "bar",
+							"value": "abcdefg-hijklmnop-qrstuv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/demo/{resource}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/demo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/demo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/demo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/demo/{resource}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/demo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/demo/{resource}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/demo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
